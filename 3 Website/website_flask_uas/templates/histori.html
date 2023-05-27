@@ -1,0 +1,16 @@
+<p class="noplat"></p>
+<p class="waktu"></p>
+</h2>
+<h2>
+ 
+ <!-- about -->
+ <section class="result">
+    <div class="container">
+      {% for image in images %}
+        <h3>Hasil</h3>
+        <span class="mb-3" id="noplat">No Plat : </span><span>{{image.plat}}</span><br>
+        <span id="waktu">waktu : </span><span>{{image.created_at}}</span>
+      {% endfor %}
+    </div>
+  </section>
+
