@@ -1,0 +1,24 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+flask-restx = "*"
+flask = "*"
+flask-sqlalchemy = "==2.5.1"
+flask-cors = "*"
+werkzeug = "*"
+cors = "*"
+nltk = "*"
+keras = "*"
+tensorflow = "*"
+keras-preprocessing = "*"
+opencv-python = "*"
+matplotlib = "*"
+easyocr = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.8"
