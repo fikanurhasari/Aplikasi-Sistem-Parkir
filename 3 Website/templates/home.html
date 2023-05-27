@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sistem Parkir</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='stylehome.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.min.js"
+      integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+
+    <!-- header -->
+    <div class="medsos">
+      <div class="container"></div>
+    </div>
+    <header>
+      <div class="container">
+        <h1><a href="{{ url_for('home') }}">SISTEM PARKIR</a></h1>
+        <ul>
+          <li class="active"><a href="/home">HOME</a></li>
+          <li><a href="/history">HISTORI</a></li>
+          <li><a href="/chats">CHATBOT</a></li>
+          <li><a href="/login">LOGOUT</a></li>
+        </ul>
+      </div>  
+    </header>
+
+    <!-- banner -->
+    <section class="banner">
+      <h2>
+        UPLOAD GAMBAR
+        <input type="file" name="image" id="img" />
+        <button type="button" class="btn btn-primary" id="upload">
+          Upload
+        </button>
+
+      <p class="noplat"></p>
+      <p class="waktu"></p>
+      </h2>
+      <h2>
+        AMBIL GAMBAR
+        <a href="upload.py"><i class="fas fa-camera"></i></a>
+      </h2>
+    </section>
+
+   <!-- about -->
+ <section class="result">
+  <div class="container">
+</section>
+
+    <section class="about">
+      <div class="container">
+        <h3>ABOUT</h3>
+        <p>
+          Aplikasi sistem parkir untuk mendeteksi plat nomor kendaraan dengan
+          menggunakan metode CNN
+        </p>
+      </div>
+    </section> -->
+
+    <!-- service -->
+
+    <!-- footer -->
+    <footer>
+      <div class="container">
+        <small
+          >Copyright &copy; 2023 - Sistem Parkir. All Rights Reserved.</small
+        >
+      </div>
+    </footer>
+
+    <script type="text/javascript">
+      $(document).ready(function () {
+      });
+
+      $("#upload").click(function () {
+        var form_data = new FormData();
+        var ins = document.getElementById("img").files.length;
+
+        for (var x = 0; x < ins; x++) {
+          form_data.append("image", document.getElementById("img").files[x]);
+        }
+        $.ajax({
+          url: "/image",
+          dataType: "json",
+          cache: false,
+          contentType: false,
+          processData: false,
+          data: form_data,
+          type: "POST",
+          success: function (response) {
+            var no_plat = response["no_plat"];
+            var created_at = response["created_at"];
+            $('#noplat').append("" + no_plat + "")
+            $('#waktu').append("" + created_at + "")
+          },
+        });
+      });
+    </script>
+  </body>
+</html>
