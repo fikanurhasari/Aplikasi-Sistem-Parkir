@@ -1,0 +1,163 @@
+{"intents": [
+	{"tag": "greeting",
+	 "patterns": [
+		"Halo",
+                "Hai",
+		"Hello",
+		"Hallo",
+		"Hola",
+		"Hey",
+		"Hi there"	
+        ],
+         "responses": [
+                "Halo kak, ada yang bisa saya bantu?"
+        ],
+         "context": [""]
+        },
+        {"tag": "salam",
+         "patterns": [
+                "Assalamualaikum", 
+                "Assalamu'alaikum"
+        ],
+         "responses": [
+                "Wa'alaikumussalam kak, ada yang bisa saya bantu?"
+        ],
+         "context": [""]
+        },
+	{"tag": "Password",
+         "patterns": [
+                "Bagaimana cara mengganti password?", 
+                "Gimana caranya ganti password?"
+        ],
+         "responses": [
+                "Yaitu dengan cara klik lupa Password, lalu akan muncul form untuk mengganti password"
+        ],
+         "context": [""]
+        },
+	{"tag": "kabar",
+         "patterns": [
+                "Apa kabar?", 
+                "Gimana kabarnya?",
+		"Kamu apa kabar?"
+        ],
+         "responses": [
+                "Baik kak"
+        ],
+         "context": [""]
+        },
+	{"tag": "goodbye",
+         "patterns": [
+                "Bye", 
+                "Sampai Jumpa",
+		"Sudah dulu ya",
+                "Selamat Tinggal", 
+                "Dadah", 
+                "Dahh"
+        ],
+         "responses": [
+                "Sampai jumpa lagi", 
+		"Sampai Bertemu lagi kak", 
+                "Semoga harimu menyenangkan", 
+                "Dadah! Kembali lagi yaa.....",
+                "Senang berbincang dengan anda....",
+                "Selamat menikmati harimu..."
+        ],
+         "context": [""]
+        },
+        {"tag": "thanks",
+         "patterns": [
+                "Terima kasih", 
+                "Makasih", 
+                "Thanks", 
+                "Terima Kasih Banyak", 
+                "Terima kasih telah membantu saya"
+        ],
+         "responses": [
+                "Terima kasih kembali",
+                "Dengan senang hati", 
+                "Kapan saja saya siap membantu", 
+                "Sudah menjadi tugas saya",
+                "Anda puas, saya juga puas"
+        ],
+         "context": [""]
+        },
+        {"tag": "noanswer",
+         "patterns": [" "],
+                  
+         "responses": [
+                "Maaf, saya tidak mengerti yang anda maksud", 
+                "Mohon untuk lebih spesifik lagi", 
+                "Saya tidak yakin bahwa saya mengerti"
+        ],
+         "context": [""]
+        },
+        {"tag": "options",
+         "patterns": [
+                "Bisakah kamu membantuku?", 
+                "Apa yang bisa kamu lakukan?",  
+                "Kamu bisa bantu aku?"
+        ],
+         "responses": [
+                "Saya bisa membantu anda untuk memberikan jawaban seputar sistem parkir"
+        ],
+         "context": [""]
+        },
+        {
+         "tag": "fungsi",
+         "patterns": [
+	      "apa itu sistem parkir?",
+	      "sistem parkir?",
+	      "parkir?",
+              "apa fungsi aplikasi parkir otomatis?"
+         ],
+         "responses": [
+              "sistem ini berguna untuk lebih ada pengawasan dalam hal keamanan kendaraan pengguna"
+       ],
+        "context": [""]
+         },
+	{
+         "tag": "info",
+         "patterns": [
+	      "Beri saya informasi",
+	      "Ada info apa?",
+	      "Informasi apa yang kamu berikan?"
+         ],
+         "responses": [
+              "Saya memberikan informasi seputar sistem parkir"
+       ],
+        "context": [""]
+         },
+	{
+	"tag": "cara",
+         "patterns": [
+              "bagaimana cara kerja sistem parkir?"
+         ],
+	"responses": [
+		"kamera mengambil gambar plat nomor kendaraan kemudian diproses oleh sistem untuk mendata waktu masuk dan keluarnya kendaraan"
+	],
+	 "context": [""]
+          },
+	{
+	"tag": "buka",
+         "patterns": [
+              "apakah kantor buka hari ini?"
+         ],
+	"responses": [
+		"kantor buka setiap hari senin - sabtu pukul 07.00 WIB - 21.00 WIB"
+	],
+	 "context": [""]
+          },
+	{
+	"tag": "invalid",
+         "patterns": [
+              "aku suka kamu",
+              "i love you",
+	      "sayang"
+         ],
+	"responses": [
+		"maaf kami tidak memahami maksud pertanyaan anda"
+	],
+	 "context": [""]
+          }
+   ]
+}
